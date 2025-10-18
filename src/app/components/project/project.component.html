@@ -1,0 +1,45 @@
+<section class="projects">
+  <h1 class="title">PROYECTOS</h1>
+
+    <div class="projects-main">
+
+        <div class="projects-enlaces">
+            <a class="filter" [class.active]="selectedCategory === ''" (click)="showAllProjects()"><strong>Todos</strong></a>
+            <a class="filter" [class.active]="selectedCategory === 'full-stack'"  (click)="filterByCategory('full-stack')"><strong>Full-stack</strong></a>
+            <a class="filter" [class.active]="selectedCategory === 'backend'"  (click)="filterByCategory('backend')"><strong>Backend</strong></a>
+            <a class="filter" [class.active]="selectedCategory === 'front'"  (click)="filterByCategory('front')"><strong>Front</strong></a>
+        </div>
+        
+        <article>
+            <div *ngFor="let project of filteredProjects" class="project-item">
+                <div class="card">
+                    <h3>{{project.titulo}}</h3>
+                    <div class="card-img">
+                        <img [src]="project.imagen" alt="{{project.titulo}}" width="350px" height="200px">
+                    </div>
+                    <div>
+                        <p>{{project.descripcion}}</p>
+                        <p><strong>Desarrollo: </strong>{{project.categoria}}</p>
+                        <p><strong>Tecnologías: </strong>{{project.tecnologias}}</p>
+                    </div>
+                    <div class="btn-git">
+                        <a [href]="project.enlace" target="_blank" rel="noopener noreferrer">
+                            <button>
+                                <i class="fab fa-github" style="margin-right: 8px;"></i>
+                                <strong>Repositorio Github</strong>
+                            </button>
+                        </a>
+                        <a *ngIf="project.demo" [href]="project.demo" target="_blank" rel="noopener noreferrer">
+                            <button>
+                                <i class="fas fa-external-link-alt" style="margin-right: 8px;"></i>
+                                <strong>Ver demo</strong>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+</section>

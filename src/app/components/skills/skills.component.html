@@ -1,0 +1,139 @@
+<section class="skills">
+  <h1 class="title">HABILIDADES</h1>
+
+    <div class="skills-main">
+        <div class="skills-buttons">
+            <button 
+  (click)="selectedSection = 1" 
+  [ngClass]="{ active: selectedSection === 1 }">Lenguajes</button>
+
+<button 
+  (click)="selectedSection = 2" 
+  [ngClass]="{ active: selectedSection === 2 }">Frameworks</button>
+<button 
+  (click)="selectedSection = 3" 
+  [ngClass]="{ active: selectedSection === 3 }">Herramientas</button>
+<button 
+  (click)="selectedSection = 4" 
+  [ngClass]="{ active: selectedSection === 4 }">Metodologías</button>
+
+<button 
+  (click)="selectedSection = 5" 
+  [ngClass]="{ active: selectedSection === 5 }">Habilidades Blandas</button>
+
+        </div>
+
+
+        <article *ngIf="selectedSection === 1">
+            <div class="list">
+                <div>
+                    <p>Java</p>
+                    <img src="img/java.png" alt="logo java">
+                </div>
+                <div>
+                    <p>PHP</p>
+                    <img src="img/php.png" alt="logo php">
+                </div>
+                <div>
+                    <p>JavaScript</p>
+                    <img src="img/js.png" alt="logo js">
+                </div>
+                <div>
+                    <p>TypeScript</p>
+                    <img src="img/typescript.png" alt="logo ts">
+                </div>
+                <div>
+                    <p>HTML</p>
+                    <img src="img/html.png" alt="logo html">
+                </div>
+                <div>
+                    <p>CSS</p>
+                    <img src="img/css.png" alt="logo css">
+                </div>
+                <div>
+                    <p>C#</p>
+                    <img src="img/c.png" alt="logo c#">
+                </div>
+                <div>
+                    <p>SQL</p>
+                    <img src="img/sql.png" alt="logo sql">
+                </div>
+            </div>
+        </article>
+
+        
+        <article *ngIf="selectedSection === 2">
+            <div class="list">
+                <div>
+                    <p>Spring Boot</p>
+                    <img src="img/spring.png" alt="logo spring">
+                </div>
+                <div>
+                    <p>Laravel</p>
+                    <img src="img/laravel.png" alt="logo laravel">
+                </div>
+                <div>
+                    <p>Angular</p>
+                    <img src="img/angular.png" alt="logo angular">
+                </div>
+                <div>
+                    <p>Tailwind</p>
+                    <img src="img/tailwind.png" alt="logo tailwind">
+                </div>
+            </div>
+        </article>
+        <article *ngIf="selectedSection === 3">
+            <div class="list">
+                <div>
+                    <p>VSCode</p>
+                    <img src="img/vs.png" alt="logo vs">
+                </div>
+                <div>
+                    <p>IntellijIdea</p>
+                    <img src="img/ij.png" alt="logo intellij">
+                </div>
+                <div>
+                    <p>Eclipse</p>
+                    <img src="img/eclipse.png" alt="logo eclipse">
+                </div>
+                <div>
+                    <p>AWS</p>
+                    <img src="img/aws.png" alt="logo aws">
+                </div>
+                <div>
+                    <p>Git y GitHub</p>
+                    <img src="img/github.png" alt="logo github">
+                </div>
+                <div>
+                    <p>Insomnia</p>
+                    <img src="img/insomnia.png" alt="logo insomnia">
+                </div>
+                <div>
+                    <p>Figma</p>
+                    <img src="img/figma.png" alt="logo figma">
+                </div>
+            </div>
+        </article>
+        
+        <article *ngIf="selectedSection === 4">
+            <div class="list">
+                <div><p>CRUD</p></div>
+                <div><p>API Rest</p></div>
+                <div><p>POO</p></div>
+                <div><p>MVC</p></div>
+            </div>
+        </article>
+
+        
+        <article *ngIf="selectedSection === 5">
+            <div class="list">
+                <div><p>Comunicación</p></div>
+                <div><p>Perseverancia</p></div>
+                <div><p>Aprendizaje continuo</p></div>
+            </div>
+        </article>
+    </div>
+
+</section>
+
+

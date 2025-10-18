@@ -1,0 +1,31 @@
+<div class="nav">
+  <div class="nombre">
+    <p><i>Alfonso</i></p>
+  </div>
+
+
+  <div class="menu-icon" (click)="toggleMenu()">
+    &#9776; 
+  </div>
+
+  <div class="enlaces" [class.open]="menuOpen">
+    <div (click)="goTo('home'); toggleMenu()" [class.active]="activeRoute === '/home'" class="enlace">
+      <a>Inicio</a>
+    </div>
+    <div (click)="goTo('me'); toggleMenu()" [class.active]="activeRoute === '/me'" class="enlace">
+      <a>Sobre mí</a>
+    </div>
+    <div (click)="goTo('skills'); toggleMenu()" [class.active]="activeRoute === '/skills'" class="enlace">
+      <a>Habilidades</a>
+    </div>
+    <div (click)="goTo('projects'); toggleMenu()" [class.active]="activeRoute === '/projects'" class="enlace">
+      <a>Proyectos</a>
+    </div>
+    <div (click)="goTo('edu'); toggleMenu()" [class.active]="activeRoute === '/edu'" class="enlace">
+      <a>Formación y experiencia</a>
+    </div>
+    <div (click)="goTo('contact'); toggleMenu()" [class.active]="activeRoute === '/contact'" class="enlace">
+      <a>Contacto</a>
+    </div>
+  </div>
+</div>

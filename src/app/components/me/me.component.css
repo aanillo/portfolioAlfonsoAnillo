@@ -1,0 +1,42 @@
+.me {
+  margin: 0 auto;
+  padding: 0;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  width: 80%;
+  gap: 3rem;
+}
+
+h1 {
+    font-size: 3em;
+    color: lightblue;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1.3em;
+}
+
+a {
+    color: cornflowerblue;
+}
+
+
+@media(max-width: 1024px) {
+
+    .me {
+        margin-top: 8em;
+    }
+}
+
+
+@media(max-width: 600px) {
+    
+    .me {
+        margin-top: 25em;
+        font-size: 0.8em;
+    }
+}

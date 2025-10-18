@@ -1,0 +1,90 @@
+.contact {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  width: 80%;
+  gap: 3rem;
+  margin-top: 15%;
+}
+
+h1 {
+    font-size: 3em;
+    color: lightblue;
+    text-decoration: underline;
+}
+
+article {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    border: solid 2px cornflowerblue;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    margin-bottom: 15%;
+    border-radius: 10px;
+    background-color: #1d1d1d;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+article:hover {
+  background-color: #040110;
+  transform: scale(1.05);
+  transition: ease 1s;
+}
+
+.data {
+  display: flex;
+  align-items: center;             
+  gap: 10px;             
+}
+
+.data a {
+    color: white;
+    text-decoration: none;
+}
+
+.data i {
+  font-size: 1em;
+  color: lightblue;
+  min-width: 24px;          
+}
+
+.data-title {
+  margin: 0;
+  color: lightblue;
+}
+
+.data-info {
+  margin-left: 5px;
+}
+
+
+@media(max-width: 1024px) {
+
+  .contact {
+    margin-top: 30%;
+    width: 80%;
+  }
+
+  article {
+    width: 80%;
+  }
+}
+
+
+@media(max-width: 600px) {
+  
+  .contact {
+    margin-top: 20em;
+    margin-bottom: 20em;
+  }
+
+  article {
+    font-size: 0.8em;
+  }
+}
