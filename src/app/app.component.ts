@@ -23,7 +23,7 @@ export class AppComponent {
 
   constructor(private router: Router) {
     this.router.events
-      .pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd)) // <- ayuda a TypeScript a entender el tipo
+      .pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd)) 
       .subscribe((event) => {
         this.activeRoute = event.urlAfterRedirects;
       });
