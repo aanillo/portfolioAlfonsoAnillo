@@ -44,8 +44,8 @@ export class ProyectoService {
       descripcion: 'Proyecto personal para un restaurante italiano, con información del lugar, el menú, información detallada sobre cada elemento de la carta y la gestión de reservas.',
       categoria: 'front',
       tecnologias: 'angular, typescript, html, css',
-      enlace: 'https://github.com/aanillo/RestaurantMenu',
-      demo: 'https://aanillo.github.io/RestaurantMenu/'
+      enlace: 'https://github.com/aanillo/CasaNapolitana',
+      demo: 'https://aanillo.github.io/CasaNapolitana/'
     },
     {
       id: 5,
