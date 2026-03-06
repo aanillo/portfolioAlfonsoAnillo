@@ -1,0 +1,1 @@
+body{height:100%;margin:0;padding:0;font-family:Spectral,serif;background:linear-gradient(270deg,#030309,#040110,#030309);background-size:600% 600%;animation:gradientShift 20s ease infinite;color:#fff}@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}to{background-position:0% 50%}}main{flex:1}
