@@ -11,9 +11,12 @@
 }
 
 h1 {
-    font-size: 3em;
-    color: lightblue;
-    text-decoration: underline;
+  font-size: 3em;
+  background: linear-gradient(90deg, lightblue, cornflowerblue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
 }
 
 article {
@@ -42,26 +45,27 @@ h2 {
 
 
 .card {
-    background-color: #1d1d1d;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg,#020617,#0f172a);
+    border-radius: 12px;
+    border: solid 2px cornflowerblue;
     padding: 10px 20px 20px 20px;
     border-radius: 10px;
     width: 90%;
+    transition: all 0.3s ease;
 }
 
 .card:hover {
     border: 2px solid cornflowerblue;
-    background-color: #040110;
-    transform: scale(1.05);
-    transition: ease 1s;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(100,149,237,0.5);
 }
 
 h3 {
-    color: cornflowerblue;
+    color: lightblue;
 }
 
 .info {
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 
@@ -80,7 +84,7 @@ h3 {
 @media(max-width: 600px) {
 
     .education {
-        margin-top: 20em;
+        margin-top: 10em;
     }
 
     article {

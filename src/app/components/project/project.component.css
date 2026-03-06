@@ -11,9 +11,12 @@
 }
 
 h1 {
-    font-size: 3em;
-    color: lightblue;
-    text-decoration: underline;
+  font-size: 3em;
+  background: linear-gradient(90deg, lightblue, cornflowerblue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
 }
 
 .projects-main {
@@ -32,15 +35,15 @@ h1 {
     width: 80%;
     margin: 0 auto;
     justify-content: center;
-    gap: 5%;
+    gap: 2%;
 }
 
 .projects-enlaces a {
-    width: 300px;
+    width: 500px;
     height: 50px;
-    background-color: #040110;
+    background: linear-gradient(145deg,#020617,#0f172a);
+    border-radius: 12px;
     border: solid 2px cornflowerblue;
-    border-radius: 10px;
     text-align: center;
     font-size: 1.3em;
     display: flex;             
@@ -48,10 +51,17 @@ h1 {
     align-items: center; 
     cursor: pointer;      
     color: white;      
+    transition: all 0.3s ease;
+}
+
+.projects-enlaces a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(100,149,237,0.5);
 }
 
 .projects-enlaces a.active {
-    background-color: lightblue;
+    background: linear-gradient(145deg, lightblue, cornflowerblue);
+    transform: scale(1.1);
     color: black;
 }
 
@@ -64,24 +74,25 @@ article {
 .card {
     display: flex;
     flex-direction: column;
-    background-color: #1d1d1d;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg,#020617,#0f172a);
+    border-radius: 15px;
     padding: 10px 20px 20px 20px;
     border-radius: 10px;
-    height: 650px;
-    width: 380px;
+    height: 680px;
+    width: 350px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2), 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
 .card:hover {
+    transform: translateY(-8px) scale(1.03);
     border: solid 2px cornflowerblue;
-    background-color: #040110;
-    transform: scale(1.05);
-    transition: ease 1s;
+    box-shadow: 0 10px 25px rgba(100,149,237,0.25), 0 5px 10px rgba(0,0,0,0.15);
 }
 
 .card-img {
     object-fit: cover;   
-    width: 90%;          
+    width: 100%;          
     display: block;      
     margin: 0 auto;      
 }
@@ -89,7 +100,7 @@ article {
 
 .card h3 {
     font-size: 1.8em;
-    color: cornflowerblue;
+    color: lightblue;
     text-decoration: underline;
     text-align: center;
 }
@@ -106,17 +117,21 @@ article {
 .btn-git button {
     width: 250px;
     height: 40px;
-    background-color: lightblue;
-    border: solid 2px cornflowerblue;
-    border-radius: 10px;
-    font-size: 1.2em;
+    background: linear-gradient(145deg, #60a5fa, #3b82f6);
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: black;
     cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
 .btn-git button:hover {
-    background-color: cornflowerblue;
-    transform: translateY(-4px);
-    transition: ease 1s;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 10px rgba(59,130,246,0.2); 
+    border: solid 3px black;
 }
 
 
@@ -148,21 +163,25 @@ article {
 @media(max-width: 600px) {
 
     .projects {
-        margin-top: 25em;
+        margin-top: 20em;
     }
 
     .projects-enlaces {
-        width: 100%;
-        gap: 0.2em;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-enlaces a {
+        width: 150px;
     }
 
     article {
         grid-template-columns: 1fr;
-        width: 80%;
+        width: 100%;
     }
 
     .card-img img {
-        width: 200px;
+        width: 250px;
     }
 
     .card {

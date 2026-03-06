@@ -11,18 +11,20 @@
 }
 
 h1 {
-    font-size: 3em;
-    color: lightblue;
-    text-decoration: underline;
+  font-size: 3em;
+  background: linear-gradient(90deg, lightblue, cornflowerblue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
 }
 
 .skills-main {
     margin: 0 auto;
     width: 90%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 5em;
-    background-color: #1d1d1d;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     padding: 20px;
     border-radius: 10px;
@@ -30,60 +32,67 @@ h1 {
 
 .skills-buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1em;
     padding: 20px;
-    width: 250px;
 }
 
 .skills-buttons button {
+    width: 20%;
     height: 50px;
-    background-color: #040110;
-    border-radius: 10px;
+    background: linear-gradient(145deg,#020617,#0f172a);
+    border-radius: 12px;
     border: solid 2px cornflowerblue;
     color: white;
     font-size: 1em;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .skills-buttons button:hover {
-    background-color: lightblue;
-    color: black;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(100,149,237,0.5);
 }
 
-
 .skills-buttons button.active {
-      background-color: lightblue;
-      transform: scale(1.1);
-      color: black;
-    }
+  background: linear-gradient(145deg, lightblue, cornflowerblue);
+  transform: scale(1.1);
+  color: black;
+}
 
 .list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 1rem; 
-  margin-top: 2%;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 0.2rem; 
+  margin-top: -5%;
 }
 
 .list div {
-  background-color: #040110;
-  padding: 1px 10px 10px 1px;
-  border-radius: 8px;
+  background: linear-gradient(145deg,#020617,#0f172a);
+  border-radius: 15px;
   text-align: center;
-  width: 170px;
-  font-size: 1.2em;
+  width: 200px;
+  height: auto;
+  padding: 5px;
+  font-size: 1.1em;
   font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
 }
 
 .list div img {
   object-fit: cover;
-  width: 70px;
+  width: 90px;
 }
 
 .list div:hover {
-    border: solid 2px cornflowerblue;
-    background-color: black;
+  transform: translateY(-10px) scale(1.05);
+  border: solid 2px cornflowerblue;
+  box-shadow: 0 15px 35px rgba(100,149,237,0.4);
+}
+
+.mysqltext {
+  font-size: medium;
 }
 
 
@@ -148,4 +157,10 @@ h1 {
     width: 90%;
     font-size: 0.8em;
   }
+
+    .list div img {
+    object-fit: cover;
+    width: 60px;
+  }
+
 }

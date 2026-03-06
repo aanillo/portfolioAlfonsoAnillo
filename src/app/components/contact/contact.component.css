@@ -4,87 +4,135 @@
   display: flex;
   flex-direction: column;
   align-items: center; 
-  justify-content: center; 
-  width: 80%;
   gap: 3rem;
-  margin-top: 15%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 80%;
 }
 
-h1 {
-    font-size: 3em;
-    color: lightblue;
-    text-decoration: underline;
+
+.contact .title {
+  font-size: 3em;
+  background: linear-gradient(90deg, lightblue, cornflowerblue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
 }
 
-article {
-    width: 50%;
-    margin: 0 auto;
-    display: flex;
-    border: solid 2px cornflowerblue;
-    padding: 30px;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    margin-bottom: 15%;
-    border-radius: 10px;
-    background-color: #1d1d1d;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+.contact-card {
+  width: 70%;
+  background: linear-gradient(145deg, #1d1d1d, #040110);
+  border-radius: 15px;
+  padding: 30px 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px 20px;
+  border: 2px solid cornflowerblue;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  transition: all 0.4s ease;
 }
 
-article:hover {
-  background-color: #040110;
-  transform: scale(1.05);
-  transition: ease 1s;
+.contact-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(100,149,237,0.25);
+  border-color: lightblue;
 }
+
 
 .data {
   display: flex;
-  align-items: center;             
-  gap: 10px;             
+  align-items: center;
+  gap: 15px;
+  font-size: large;
 }
 
-.data a {
-    color: white;
-    text-decoration: none;
-}
 
 .data i {
-  font-size: 1em;
-  color: lightblue;
-  min-width: 24px;          
+  font-size: 1.5em;
+  color: #60a5fa;
+  min-width: 30px;
+  transition: transform 0.3s ease;
 }
+
+.data i:hover {
+  transform: scale(1.2) rotate(-10deg);
+}
+
 
 .data-title {
   margin: 0;
-  color: lightblue;
+  color: #60a5fa;
+  font-weight: bold;
 }
 
+
 .data-info {
-  margin-left: 5px;
+  margin: 0;
+  color: white;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.data-info:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+
+.data a {
+  color: inherit;
+  text-decoration: none;
 }
 
 
 @media(max-width: 1024px) {
-
-  .contact {
-    margin-top: 30%;
+  .contact-card {
     width: 80%;
   }
 
-  article {
-    width: 80%;
+  .contact .title {
+    font-size: 2.7em;
+  }
+
+  .data i {
+    font-size: 1.4em;
+    min-width: 28px;
+  }
+
+  .data-info {
+    font-size: 0.95em;
   }
 }
 
-
 @media(max-width: 600px) {
-  
+
   .contact {
-    margin-top: 20em;
-    margin-bottom: 20em;
+    margin-top: 10em;
   }
 
-  article {
-    font-size: 0.8em;
+  .contact-card {
+    grid-template-columns: repeat(1, 1fr);
+    width: 95%;
+    padding: 20px;
+    margin-bottom: 10%;
+  }
+
+  .contact .title {
+    font-size: 2.5em;
+  }
+
+  .data {
+    gap: 10px;
+  }
+
+  .data i {
+    font-size: 1.2em;
+    min-width: 24px;
+  }
+
+  .data-info {
+    font-size: 0.9em;
   }
 }

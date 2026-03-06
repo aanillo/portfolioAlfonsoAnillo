@@ -11,9 +11,12 @@
 }
 
 h1 {
-    font-size: 3em;
-    color: lightblue;
-    text-decoration: underline;
+  font-size: 3em;
+  background: linear-gradient(90deg, lightblue, cornflowerblue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
 }
 
 p {
@@ -36,7 +39,7 @@ a {
 @media(max-width: 600px) {
     
     .me {
-        margin-top: 25em;
+        margin-top: 20em;
         font-size: 0.8em;
     }
 }
