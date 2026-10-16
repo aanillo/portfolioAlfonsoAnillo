@@ -15,7 +15,7 @@ export class ProyectoService {
       categoria: 'full-stack',
       tecnologias: 'laravel, php, blade, tailwind, alpinejs, mysql',
       enlace: 'https://github.com/aanillo/BlogDev.git',
-      demo: 'https://elrincondeldev.up.railway.app/'
+      demo: null
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ export class ProyectoService {
       categoria: 'full-stack',
       tecnologias: 'laravel, php, blade, tailwind, alpinejs, mysql',
       enlace: 'https://github.com/aanillo/ProyectoLibreros',
-      demo: 'https://libreros.duckdns.org'
+      demo: null
     },
     {
       id: 3,
